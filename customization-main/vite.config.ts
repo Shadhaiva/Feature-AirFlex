@@ -1,8 +1,9 @@
+// vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: "/threejs-react-TDesigner/",
+  base: './', // 👈 or use '/customization-main/' if hosted in a subpath
   plugins: [react()],
-  assetsInclude: ['**/*.glb'],
+   assetsInclude: ['**/*.glb']
 })
