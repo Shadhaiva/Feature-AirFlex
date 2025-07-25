@@ -24,51 +24,147 @@ body:has(.card[data-color='green']:hover) {
 
 @layer utilities {
   .max-container {
-    @apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 3rem;
+    padding-top: 126px !important;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    min-height: calc(100vh - 80px);
+    /* add sm:p-16 directly in your HTML/JSX */
   }
 
   .head-text {
-    @apply sm:text-5xl text-3xl font-semibold sm:leading-snug font-poppins;
+    font-size: 1.875rem;
+    font-weight: 600;
+    line-height: 1.375;
+    font-family: 'Poppins', sans-serif;
+    /* add sm:text-5xl sm:leading-snug in HTML/JSX */
   }
 
   .subhead-text {
-    @apply font-semibold sm:text-3xl text-xl relative font-poppins;
+    font-weight: 600;
+    font-size: 1.25rem;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    /* add sm:text-3xl in HTML/JSX */
   }
 
   .blue-gradient_text {
-    @apply bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
   }
 
   .btn {
-    @apply text-white bg-gradient-to-r from-[#00c6ff] to-[#0072ff] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center;
+    color: white;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    width: 100%;
+    padding: 0.625rem 1.25rem;
+    text-align: center;
+    /* add sm:w-auto in HTML/JSX */
+  }
+
+  .btn:focus {
+    box-shadow: 0 0 0 4px rgb(59 130 246 / 0.5);
   }
 
   .header {
-    @apply flex justify-between items-center sm:px-16 px-8 py-4 max-w-5xl mx-auto absolute top-0 bg-transparent z-10 right-0 left-0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 0;
+    background-color: transparent;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    /* add sm:px-16 in HTML/JSX */
   }
 
   .footer {
-    @apply max-w-5xl mx-auto sm:px-16 pb-6 px-8 flex flex-col gap-7;
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    /* add sm:px-16 in HTML/JSX */
   }
 
   .footer-container {
-    @apply flex flex-wrap gap-7 items-center justify-between;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.75rem;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .info-box {
-    @apply mx-5 relative flex text-white flex-col gap-3 max-w-2xl neo-brutalism-blue pt-4 pb-12 px-8;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    position: relative;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 32rem;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .neo-btn {
-    @apply py-3 px-6 rounded-lg text-blue-500 text-center font-semibold sm:w-1/2 w-[90%] -bottom-5 absolute mx-auto right-0 left-0 flex justify-center items-center gap-3;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    color: rgb(59 130 246);
+    text-align: center;
+    font-weight: 600;
+    width: 90%;
+    bottom: -1.25rem;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    /* add sm:w-1/2 in HTML/JSX */
   }
 
   .cta {
-    @apply w-full flex items-center md:flex-row flex-col sm:mt-16 mt-8 gap-7;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap: 1.75rem;
+    /* add md:flex-row sm:mt-16 in HTML/JSX */
   }
 
   .cta-text {
-    @apply text-black-500 font-extrabold flex-1 text-3xl max-md:text-center;
+    color: rgb(107 114 128);
+    font-weight: 800;
+    flex: 1;
+    font-size: 1.875rem;
+    /* add max-md:text-center in HTML/JSX */
   }
 }
 
